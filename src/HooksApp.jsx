@@ -8,6 +8,11 @@ export const HooksApp = () => {
       <h1>Aplicación de Hooks</h1>
       <hr />
       <FetchApp/>
+      <hr/>
+      <FormsApp/>
+      <hr/>
+      <CounterApp/>
+
     </>
   )
 }
