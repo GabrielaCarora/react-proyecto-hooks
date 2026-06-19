@@ -8,17 +8,17 @@ export const useFetch = (url) => {
         error: null
     })
 
-    const {data, isLoading, errors} = state
+    const {data, isLoading, error} = state
 
     const getFetch = async () => {
         if (!url) return
         try {
             const res = await fetch(url)
-            const data = res.json()
+            const data = await res.json()
             setState({
                 data,
                 isLoading: false,
-                errors: null
+                error: null
             })
         }
         catch (error) {
@@ -39,6 +39,6 @@ export const useFetch = (url) => {
     return {
         data,
         isLoading,
-        errors
+        error
     }
 }

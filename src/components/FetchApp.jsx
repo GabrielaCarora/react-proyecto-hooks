@@ -27,7 +27,7 @@ export const FetchApp = () => {
                         </thead>
                         <tbody>
                             {
-                                users.map(user => {
+                                data.map(user => {
                                     return (
                                         <tr key ={user.id}>
                                             <th scope="row">{user.id}</th>
